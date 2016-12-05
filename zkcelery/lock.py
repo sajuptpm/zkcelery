@@ -86,9 +86,9 @@ class LockTask(celery.Task):
         :param \*args: List of values to use to refine the lock.
         :param \**kwargs: Any arguments to be apssed to self.retry().
         '''
-        kwargs['identifier'] = identifier
-        kwargs['blocking'] = blocking
-        kwargs['retry'] = retry
+        #kwargs['identifier'] = identifier
+        #kwargs['blocking'] = blocking
+        #kwargs['retry'] = retry
         return self._lock(args, kwargs, use_lock=True)
 
     @contextlib.contextmanager
